@@ -1,0 +1,19 @@
+{
+  "name": "user-management",
+  "version": "1.0.0",
+  "description": "User Management Application with Node.js Backend and React Frontend",
+  "main": "Backend/server.js",
+  "scripts": {
+    "install-all": "npm install --prefix Backend && npm install --prefix Frontend",
+    "start": "node Backend/server.js",
+    "dev": "concurrently \"npm run dev --prefix Backend\" \"npm run dev --prefix Frontend\"",
+    "build": "npm run build --prefix Frontend",
+    "heroku-postbuild": "npm install --prefix Backend && npm install --prefix Frontend && npm run build --prefix Frontend"
+  },
+  "keywords": ["user-management", "node", "react"],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^7.0.0"
+  }
+}
